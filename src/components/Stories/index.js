@@ -44,7 +44,7 @@ const Stories = () => (
     keyExtractor={({name}) => name}
     horizontal
     renderItem={({item}) => <Story imageUri={item.imageUri} name={item.name} />}
-    showsHorizontalScrollIndicator = {false}
+    showsHorizontalScrollIndicator={false}
   />
 );
 

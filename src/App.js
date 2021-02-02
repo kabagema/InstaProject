@@ -7,25 +7,19 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  Text
-} from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
 import ProfilePicture from './components/ProfilePicture';
 import HomeScreen from './screens/HomeScreen';
 
 const App: () => React$Node = () => {
   return (
     <>
-    <SafeAreaView>
-      <HomeScreen />
-      {/* <ProfilePicture /> */}
-    </SafeAreaView>
-    
-
+      <SafeAreaView>
+        <HomeScreen />
+        {/* <ProfilePicture /> */}
+      </SafeAreaView>
     </>
   );
 };
-
 
 export default App;
