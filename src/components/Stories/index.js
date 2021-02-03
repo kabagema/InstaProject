@@ -1,6 +1,7 @@
 import React from 'react';
 import Story from '../Story';
 import {View, Text, FlatList} from 'react-native';
+import styles from './styles';
 
 const data = [
   {
@@ -40,6 +41,7 @@ const data = [
 ];
 const Stories = () => (
   <FlatList
+    style={styles.container}
     data={data}
     keyExtractor={({name}) => name}
     horizontal
