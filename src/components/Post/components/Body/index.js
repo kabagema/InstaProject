@@ -1,13 +1,14 @@
 import React from 'react';
-import {Image, Text} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import styles from '../../../ProfilePicture/styles';
 
 const Body = ({imageUri}) => (
   <>
-    {console.log('Body', imageUri)}
-
+    {console.log('Body: url =>', imageUri)}
     <Text>Body</Text>
-    <Image source={{imageUri}} style={styles.image} />
+    <View>
+      <Image source={{imageUri}} style={styles.image} />
+    </View>
   </>
 );
 

@@ -8,7 +8,7 @@ const Post = ({post}) => (
   <>
     <View>
       <Header imageUri={post.user.imageUri} name={post.user.name} />
-      <Body imageUri={post.imageUri.uri} />
+      <Body imageUri={post.imageUri}/>
       <Footer />
     </View>
   </>
