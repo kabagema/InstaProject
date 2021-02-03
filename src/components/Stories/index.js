@@ -1,6 +1,6 @@
 import React from 'react';
 import Story from '../Story';
-import {View, Text, FlatList} from 'react-native';
+import {FlatList} from 'react-native';
 import styles from './styles';
 
 const data = [

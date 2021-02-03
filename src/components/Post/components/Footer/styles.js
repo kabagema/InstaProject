@@ -1,6 +1,18 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  
+  iconsContainer : {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 5,
+  },
+  leftIcons: {
+      flexDirection: 'row',
+      width: 120,
+      justifyContent: 'space-between',
+     
+  },
   container: {
     margin: 5,
   },

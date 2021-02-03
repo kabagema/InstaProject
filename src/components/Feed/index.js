@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList } from 'react-native';
 import Post from '../Post';
 import Stories from '../Stories';
-import styles from './styles';
+import  styles from "./styles"
 
 const data = [
   {
