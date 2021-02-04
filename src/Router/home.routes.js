@@ -36,3 +36,5 @@ const HomeRoutes = () => (
 );
 
 export default HomeRoutes;
+
+// Day 2 done
