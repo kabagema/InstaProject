@@ -26,16 +26,12 @@ const HomeRoutes = () => (
         },
         headerLeft: () => <Camera name="camera" size={25} color={'#000'} />,
         headerTitle: () => (
-          <Image source={logo} resizeMode="contain" style={{width: 125}} />
+          <Image source={logo} resizeMode="contain" style={{width: 125, height: 50}} />
         ),
         headerRight: () => (
           <Paper name="paper-plane-outline" size={27} color={'#000'} />
         ),
       }}
-    />
-    <HomeStack.Screen 
-      name="Story"
-      component={StoryScreen}
     />
   </HomeStack.Navigator>
 );
