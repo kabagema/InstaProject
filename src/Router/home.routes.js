@@ -6,6 +6,7 @@ import Camera from 'react-native-vector-icons/Feather';
 import Paper from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from '../screens/HomeScreen';
+import StoryScreen from '../screens/StoryScreen';
 import logo from '../assets/images/logo.png';
 
 const HomeStack = createStackNavigator();
@@ -31,6 +32,10 @@ const HomeRoutes = () => (
           <Paper name="paper-plane-outline" size={27} color={'#000'} />
         ),
       }}
+    />
+    <HomeStack.Screen 
+      name="Story"
+      component={StoryScreen}
     />
   </HomeStack.Navigator>
 );
