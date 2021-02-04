@@ -11,7 +11,6 @@ const App: () => React$Node = () => {
     <NavigationContainer>
       <StatusBar barStyle="dark-content" />
         <Router />
-
       </NavigationContainer>
   );
 };
