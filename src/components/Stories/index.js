@@ -4,10 +4,7 @@ import {FlatList} from 'react-native';
 import styles from './styles';
 
 const data = [
-  {
-    imageUri: 'https://reactjs.org/logo-og.png',
-    name: 'DeFault',
-  },
+ 
   {
     imageUri:
       'https://images.unsplash.com/photo-1520271348391-049dd132bb7c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80',
