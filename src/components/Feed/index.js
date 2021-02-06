@@ -26,8 +26,8 @@ const data = [
       name: 'Ron',
     },
     imageUri:
-      'https://images.unsplash.com/photo-1536632856133-3a3441454dd5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwxMDY1OTc2fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60',
-    caption: 'Alexa, Play welcome to Miami',
+      'https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60',
+    caption: 'Neo Glam',
     likesCount: 1255,
     postedAt: '1 hour ago',
   },
@@ -55,18 +55,7 @@ const data = [
     likesCount: 1255,
     postedAt: '6 hours ago',
   },
-  {
-    id: '5',
-    user: {
-      imageUri:
-        'https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60',
-      name: 'Queen',
-    },
-    imageUri: 'https://images.unsplash.com/photo-1474518551598-147ee65f265e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-    caption: 'Eye of the world',
-    likesCount: 1255,
-    postedAt: '1 month ago',
-  },
+  
 ];
 
 const Feed = () => (
