@@ -17,4 +17,3 @@ const App: () => React$Node = () => {
 
 export default App;
 
-// https://youtu.be/nBz4k-F9g5E?t=4832
