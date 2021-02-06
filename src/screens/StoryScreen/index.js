@@ -1,13 +1,14 @@
 import {useNavigation, useRoute} from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
 
+import Camera from 'react-native-vector-icons/Feather';
+import Paper from 'react-native-vector-icons/Ionicons';
+
 import {
-  ActivityIndicator,
-  Dimensions,
-  ImageBackground,
-  SafeAreaView,
+  ActivityIndicator, Dimensions,
+  ImageBackground, SafeAreaView,
   Text,
-  TouchableWithoutFeedback,
+  TextInput, TouchableWithoutFeedback,
   View,
 } from 'react-native';
 import styles from './styles';
@@ -78,17 +79,33 @@ const StoryScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableWithoutFeedback onPress={handlePress}>
-        <ImageBackground
-          source={{uri: activeStory.imageUri}}
-          style={styles.image}>
-          <View style={styles.userInfo}>
-            <ProfilePicture uri={userStories.user.imageUri} size={45} />
-            <Text style={styles.userName}>{userStories.user.name}</Text>
-          </View>
-          <View></View>
-        </ImageBackground>
-      </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={handlePress}>
+            <ImageBackground source={{uri: activeStory.imageUri}} style={styles.image}>
+                <View style={styles.userInfo}>
+                  <ProfilePicture uri={userStories.user.imageUri} size={45} />
+                  <Text style={styles.userName}>{userStories.user.name}</Text>
+                  <Text style={styles.postedTime}>{activeStory.postedTime}</Text>
+                </View>
+
+                <View style={styles.bottomContainer}>
+                  <View style={styles.cameraButton}>
+                    <Camera name="camera" size={30} color={'#ffffff'} />
+                  </View>
+                    
+                  <View style={styles.textInputContainer}>
+                    <TextInput 
+                        editable  placeholder="Send message"  
+                        style={styles.textInput} placeholderTextColor={"white"}
+                    />
+                  </View>
+
+                  <View style={styles.messageButton}>
+                    <Paper name="paper-plane-outline" size={31} color={'#ffffff'} />             
+                  </View>
+
+                </View>
+            </ImageBackground>
+        </TouchableWithoutFeedback>
     </SafeAreaView>
   );
 };
