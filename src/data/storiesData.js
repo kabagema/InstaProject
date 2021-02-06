@@ -14,7 +14,7 @@ export default [
       },
       {
         imageUri:
-          'https://images.unsplash.com/photo-1603258849062-0f9f0d97cb47?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE0fHRvd0paRnNrcEdnfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60',
+          'https://images.unsplash.com/photo-1612520928889-e907eca88da3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=594&q=80',
         postedTime: '3 h',
       },
     ],
@@ -79,26 +79,6 @@ export default [
       id: '5',
       imageUri:
         'https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60',
-      name: 'Ingrid',
-    },
-    stories: [
-      {
-        imageUri:
-          'https://images.unsplash.com/photo-1578671815317-029d7b69b669?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDY4fGJvOGpRS1RhRTBZfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60',
-        postedTime: '3 m',
-      },
-      {
-        imageUri:
-          'https://images.unsplash.com/photo-1573261658953-8b29e144d1af?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDM3fGJvOGpRS1RhRTBZfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60',
-        postedTime: '5 m',
-      },
-    ],
-  },
-  {
-    user: {
-      id: '6',
-      imageUri:
-        'https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60',
       name: 'Queen',
     },
     stories: [
@@ -116,4 +96,4 @@ export default [
   },
 ];
 
-// moment
+// moment js
