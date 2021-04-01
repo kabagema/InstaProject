@@ -1,8 +1,12 @@
-import React from 'react';
-import { FlatList } from 'react-native';
+import React, { useState } from 'react';
+import {FlatList} from 'react-native';
 import Post from '../Post';
 import Stories from '../UserStoriesPreview';
-import  styles from "./styles"
+// import  styles from "./styles"
+
+import {API, graphqlOperation} from 'aws-amplify';
+import { useEffect } from 'react';
+import {listPosts} from '../../graphql/queries';
 
 const data = [
   {
@@ -50,24 +54,36 @@ const data = [
         'https://images.unsplash.com/photo-1486074051793-e41332bf18fc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8&auto=format&fit=crop&w=800&q=60',
       name: 'Vanessa',
     },
-    imageUri: 'https://images.unsplash.com/photo-1583133010801-0b9802ae9c17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1964&q=80',
+    imageUri:'https://images.unsplash.com/photo-1583133010801-0b9802ae9c17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1964&q=80',
     caption: 'Ancient Aesthetic >>>>',
     likesCount: 1255,
     postedAt: '6 hours ago',
   },
-  
 ];
 
-const Feed = () => (
-  <>
-    <FlatList
-        data={data}
-        renderItem={({item}) => <Post post={item} />}
-        keyExtractor={({id}) => id}
-        ListHeaderComponent={Stories}
+const Feed = () => {
+  const [Posts, setPosts] = useState([]);
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
+  const fetchPosts = async () => {
+    try {
+      const postsData = await API.graphql(graphqlOperation(listPosts));
+      setPosts(postsData.data.listPosts.items);
+    } catch (e) {
+      console.log(e.message);
+    }
+  }
+
+  return (
+    <FlatList
+      data={Posts}
+      renderItem={({item}) => <Post post={item} />}
+      keyExtractor={({id}) => id}
+      ListHeaderComponent={Stories}
     />
-  </>
-);
+  );
+};
 
 export default Feed;
